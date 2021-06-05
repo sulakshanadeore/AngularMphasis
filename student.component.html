@@ -1,0 +1,40 @@
+{{1+3+1}}
+<hr/>
+<div>
+    <form>
+        <fieldset>
+            <legend>Studnet Info</legend>
+            <label>Enter Rollno</label>
+            <input type="number" id="rno" name="rno" [(ngModel)]="rollno"/>
+            <br/>
+            <label>Enter Student Name:</label>
+            <input type="text" id="studname" name="studname" [(ngModel)]="studname"/>
+            <br/>
+            <label>Enter Birth Year:</label>
+            <input type="number" id="byear" name="byear" [(ngModel)]="birthyear"/>
+            <br/>
+            <label>Your age is </label>
+            <input type="number" id="age1" name="age1" [(ngModel)]="age"/> <label>years</label>
+            <br/>
+
+
+            <input type="submit" value="Accept Data Of Student" (click)="AcceptDetails($event)"/>
+            <input type="submit" value="Display Data Of Student" (click)="Display($event)"/>
+
+        </fieldset>
+    </form>
+    <h1>the Student Details are {{details}}</h1>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

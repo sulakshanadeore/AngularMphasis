@@ -1,0 +1,54 @@
+<div>
+  Select Month:
+  <select (change)="changingday($event)" name="month"  [(ngModel)]="selectedday" >
+    <option *ngFor="let i of weekdays" >{{i}}</option>
+  
+  </select>
+  </div>
+  <span *ngIf="isHoliday; then  cond1  else cond2 ">
+    condition is valid
+  </span>
+  
+  <ng-template #cond1> 
+    <input type="text" value="Its a holiday "/>
+    </ng-template>
+  <ng-template #cond2> <input type="text" value="Its not a holiday "/> </ng-template>
+
+  <hr/>
+
+
+  <!-- <input  type="button" (click)="bookSeat($event)" value="Book Seat"/> -->
+  <span *ngIf="isSeatAvailable; then  a1  else a2 ">
+    condition is valid
+  </span>
+
+  <ng-template #a1> 
+    <input  type="button"  style="background-color:blue"  value="Book Seat"/>
+    </ng-template>
+  <ng-template #a2> 
+    <input  type="button"  style="background-color: red;"  value="Book Seat"/>
+  </ng-template>
+
+<hr/>
+Original title= <h1>{{title}}</h1>
+  
+    Uppercase 
+     <h1>{{title|uppercase}}</h1>
+     Lower case
+     <h1>{{title|lowercase}}</h1>
+     currency
+     <h1>{{324324 | currency:"USD"}}</h1>
+     <h1>{{324324 | currency:"INR"}}</h1>
+     Date
+     <h1>{{todaysdate | date:'M/d/y'}}</h1>
+<h1>{{todaysdate | date:'longTime'}}</h1>
+<h1>{{todaysdate | date:'shortTime'}}</h1>
+<h1>{{todaysdate | date:'yyyy'}}</h1>
+Decimal 
+<h1>{{555.66679788| number:'3.6'}}</h1>
+weekdays
+<h1>{{weekdays | slice:2:6}}</h1>
+percent
+<h1>{{66.6|percent}}</h1>
+Json string
+<h1>{{empval | json}}</h1>

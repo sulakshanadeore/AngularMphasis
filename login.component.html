@@ -1,0 +1,8 @@
+<p>login works!</p>
+<form #logindetails="ngForm" (ngSubmit)="onsubmitClick(logindetails.value)">
+    Eneter User ID: <input type="text" name="loginid" ngModel/>
+    <br/>
+    Eneter Password: <input type="password" name="loginpwd" ngModel/>
+    <br/>
+    <input type="submit" value="Submit"/>
+</form>

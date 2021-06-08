@@ -1,0 +1,57 @@
+<p>registration works!</p>
+<div>
+    <h1>Registration Form</h1>
+    <form #regisform="ngForm" (ngSubmit)="regisform.form.valid" novalidate>
+        <div class="form-group">
+        <label>Enter Firstname</label>
+        <input type="text" name="fname" #fname="ngModel" [(ngModel)]="fname"  required  />
+        <div *ngIf="regisform.submitted &&  fname.invalid" class="invalid-feedback"> 
+            <div *ngIf="fname.errors?.required"> First Name is required</div>
+        </div>
+    </div>
+        <br/>
+        <div class="form-group">
+        <label>Enter Lastname</label>
+        <input type="text" name="lname" [(ngModel)]="lname" required/>
+        <div *ngIf="regisform.submitted &&  lname.invalid" class="invalid-feedback"> 
+            <div *ngIf="lname.errors?.required"> First Name is required</div>
+        </div>
+
+    </div>
+        <br/>
+        <div class="form-group">
+        <label>Enter Email</label>
+        <input type="text" name="email" [(ngModel)]="email" required/>
+        <div *ngIf="regisform.submitted &&  fname.invalid" class="invalid-feedback"> 
+            <div *ngIf="email.errors?.required"> First Name is required</div>
+        </div>
+    </div>
+        <br/>
+        <div class="form-group">
+        <label>Enter Password</label>
+        <input type="text" name="pwd" [(ngModel)]="pwd" minlength="6" required/>
+        <div *ngIf="regisform.submitted &&  pwd.invalid" class="invalid-feedback"> 
+            <div *ngIf="pwd.errors?.required"> First Name is required</div>
+        </div>
+        <div *ngIf="pwd.errors?.minlength">
+            Name must be at least 4 characters long.
+          </div>
+
+    </div>
+        <br/>
+        <div class="form-group">
+        <label>Confirm Password</label>
+        <input type="text" name="cpwd" [(ngModel)]="cpwd" minlength="6" required/>
+        <div *ngIf="regisform.submitted &&  cpwd.invalid" class="invalid-feedback"> 
+            <div *ngIf="cpwd.errors?.required"> First Name is required</div>
+        </div>
+    </div>
+        <br/>
+         <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Submit Form" name="reg"/>
+
+    </div>
+
+
+    </form>
+</div>

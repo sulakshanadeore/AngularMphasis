@@ -1,0 +1,17 @@
+<p>customers works!</p>
+
+<form #contactForm="ngForm" (ngSubmit)="onsubmit(contactForm.value)">
+Enter name: <input type="text" name="name" ngModel required/>
+Enter city: <input type="text" name="city" ngModel required/>
+<input type="submit" name="b1" value="SubmitData"/>
+</form>
+
+<pre>Value : {{contactForm.value | json }} </pre>
+<pre>Valid : {{contactForm.valid}} </pre>
+<pre>Touched : {{contactForm.touched  }} </pre>
+<pre>Submitted : {{contactForm.submitted  }} </pre>
+<pre>Pristine : {{contactForm.pristine  }} </pre>
+<pre>City is Pristine : {{contactForm.controls.city.pristine }} </pre>
+<pre>City is dirty : {{contactForm.controls.city.dirty }} </pre>
+
+

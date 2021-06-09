@@ -1,0 +1,32 @@
+<p>customer-list works!</p>
+<h2>LIst of customers</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Customer No</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Country</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let c of customers;let i=index">
+   <td>{{c.customerno}}</td>
+   <td>{{c.name}}</td>
+   <td>{{c.address}}</td>
+<td>{{c.city}}</td>
+   <td>{{c.state}}</td>
+   <td>{{c.country}}</td>
+   <td><button (click)="showdetails(c)">Edit</button>
+</td>
+<td><button (click)="delete(i)">Delete</button></td>
+    </tr>
+</tbody>
+</table>
+
+
+<hr/>
+ <app-customer-detail [customer]="selectedCustomer" (customerChange)="update($event)" (customerAdd)="add($event)"></app-customer-detail> 

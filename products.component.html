@@ -1,0 +1,20 @@
+<p>products works!</p>
+<input type="submit" value="ShowList" (click)="showProductsList()" />
+<table>
+    <tr>
+        <thead>
+<td>Product ID</td>
+<td>Product Name</td>
+<td>Product price</td>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of prod">
+                <td>{{p.prodid}}</td>
+                <td>{{p.prodname}}</td>
+                <td>{{p.price}}</td>
+            </tr>
+
+        </tbody>
+    </tr>
+</table>

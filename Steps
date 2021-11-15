@@ -1,0 +1,31 @@
+1)	ng new ProjectName
+2) want to enable routing-----Y
+CSS--->enter
+3) search app-routing.module.ts
+4) create your compoents---- ng g c componentname
+LoginComponent-------component.html----->
+<form>
+<lable>
+<input type=""
+</form>
+
+Models-----> create a class cls_LoginModel---->userid:string,pwd:string
+(Webapi ----LoginModel--- userid,pwd)
+
+
+
+5)app-routing.module.ts-------
+
+import { LanguagesComponent } from './languages/languages.component';
+import { InfoComponent } from './info/info.component';
+import { ProductsComponent } from './products/products.component';
+
+registering path with component---
+ {path:'language',component:LanguagesComponent},
+
+
+6)html file---- <nav>
+<ul><li>
+<div>
+
+
